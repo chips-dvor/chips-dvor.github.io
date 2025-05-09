@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планы тренировок - Здоровый образ жизни</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__container container">
+            <a href="index.html" class="header__logo">ЗОЖ</a>
+            <nav class="header__nav">
+                <div class="header__burger">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </div>
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
+                    <li class="header__menu-item"><a href="tips.html" class="header__menu-link">Советы</a></li>
+                    <li class="header__menu-item"><a href="habit-tracker.html" class="header__menu-link">Трекер привычек</a></li>
+                    <li class="header__menu-item"><a href="training-plans.html" class="header__menu-link">Планы тренировок</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <div class="container">
+            <h1 class="title title--main">Планы тренировок</h1>
+            
+            <section class="section">
+                <h2 class="title title--section">Выберите уровень сложности</h2>
+                <p class="section__description">Мы подготовили планы тренировок для разных уровней подготовки. Выберите подходящий для вас уровень и начните тренироваться уже сегодня!</p>
+                
+                <div class="training">
+                    <div class="training__tabs">
+                        <button class="training__tab training__tab--active" data-tab="beginner">Начинающий</button>
+                        <button class="training__tab" data-tab="intermediate">Средний</button>
+                        <button class="training__tab" data-tab="advanced">Продвинутый</button>
+                    </div>
+                    
+                    <div class="training__content training__content--active" id="beginner">
+                        <h3 class="training__title">Тренировки для начинающих</h3>
+                        <p class="training__description">Эти тренировки подходят для тех, кто только начинает свой путь к здоровому образу жизни или возвращается к тренировкам после длительного перерыва.</p>
+                        
+                        <ul class="training__list">
+                            <li class="training__item">
+                                <h4 class="training__item-title">Тренировка всего тела для начинающих</h4>
+                                <p class="training__item-description">Простая тренировка для всего тела, подходящая для новичков. Выполняйте 2-3 раза в неделю.</p>
+                                <ul>
+                                    <li>Приседания: 3 подхода по 10 повторений</li>
+                                    <li>Отжимания с колен: 3 подхода по 8 повторений</li>
+                                    <li>Планка: 3 подхода по 20 секунд</li>
+                                    <li>Выпады: 2 подхода по 8 повторений на каждую ногу</li>
+                                    <li>Подъемы корпуса: 3 подхода по 12 повторений</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                            <li class="training__item">
+                                <h4 class="training__item-title">Кардио для начинающих</h4>
+                                <p class="training__item-description">Легкая кардио тренировка для улучшения выносливости. Выполняйте 3-4 раза в неделю.</p>
+                                <ul>
+                                    <li>Разминка: 5 минут ходьбы</li>
+                                    <li>Чередование: 1 минута быстрой ходьбы, 1 минута медленного бега (10 повторений)</li>
+                                    <li>Заминка: 5 минут ходьбы</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                            <li class="training__item">
+                                <h4 class="training__item-title">Растяжка для начинающих</h4>
+                                <p class="training__item-description">Базовый комплекс упражнений на растяжку для улучшения гибкости. Выполняйте 2-3 раза в неделю.</p>
+                                <ul>
+                                    <li>Наклоны вперед: 3 подхода по 30 секунд</li>
+                                    <li>Растяжка квадрицепсов: 2 подхода по 30 секунд на каждую ногу</li>
+                                    <li>Растяжка плеч: 2 подхода по 30 секунд</li>
+                                    <li>Растяжка спины: 3 подхода по 30 секунд</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="training__content" id="intermediate">
+                        <h3 class="training__title">Тренировки среднего уровня</h3>
+                        <p class="training__description">Эти тренировки подходят для тех, кто уже имеет базовый опыт тренировок и хочет перейти на следующий уровень.</p>
+                        
+                        <ul class="training__list">
+                            <li class="training__item">
+                                <h4 class="training__item-title">Силовая тренировка среднего уровня</h4>
+                                <p class="training__item-description">Тренировка для тех, кто уже имеет базовый опыт. Выполняйте 3-4 раза в неделю.</p>
+                                <ul>
+                                    <li>Приседания с гантелями: 4 подхода по 12 повторений</li>
+                                    <li>Отжимания: 4 подхода по 12 повторений</li>
+                                    <li>Тяга гантелей в наклоне: 3 подхода по 10 повторений</li>
+                                    <li>Выпады с гантелями: 3 подхода по 10 повторений на каждую ногу</li>
+                                    <li>Планка с подъемом руки: 3 подхода по 40 секунд</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                            <li class="training__item">
+                                <h4 class="training__item-title">Интервальная тренировка</h4>
+                                <p class="training__item-description">Интенсивная интервальная тренировка для сжигания жира. Выполняйте 2-3 раза в неделю.</p>
+                                <ul>
+                                    <li>Разминка: 5 минут легкой кардио нагрузки</li>
+                                    <li>30 секунд интенсивной работы (бег, прыжки), 30 секунд отдыха (8 повторений)</li>
+                                    <li>1 минута отдыха</li>
+                                    <li>30 секунд интенсивной работы, 30 секунд отдыха (8 повторений)</li>
+                                    <li>Заминка: 5 минут легкой кардио нагрузки</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                            <li class="training__item">
+                                <h4 class="training__item-title">Круговая тренировка</h4>
+                                <p class="training__item-description">Эффективная круговая тренировка для всего тела. Выполняйте 3 раза в неделю.</p>
+                                <ul>
+                                    <li>Берпи: 45 секунд работы, 15 секунд отдыха</li>
+                                    <li>Приседания с прыжком: 45 секунд работы, 15 секунд отдыха</li>
+                                    <li>Планка с переходом в отжимание: 45 секунд работы, 15 секунд отдыха</li>
+                                    <li>Скалолаз: 45 секунд работы, 15 секунд отдыха</li>
+                                    <li>Боковая планка: 45 секунд работы (на каждую сторону), 15 секунд отдыха</li>
+                                    <li>Повторить круг 3-4 раза</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="training__content" id="advanced">
+                        <h3 class="training__title">Тренировки продвинутого уровня</h3>
+                        <p class="training__description">Эти тренировки подходят для опытных спортсменов, которые хотят достичь максимальных результатов.</p>
+                        
+                        <ul class="training__list">
+                            <li class="training__item">
+                                <h4 class="training__item-title">Продвинутая силовая тренировка</h4>
+                                <p class="training__item-description">Интенсивная тренировка для опытных спортсменов. Выполняйте 4-5 раз в неделю.</p>
+                                <ul>
+                                    <li>Приседания со штангой: 5 подходов по 8 повторений</li>
+                                    <li>Жим штанги лежа: 5 подходов по 8 повторений</li>
+                                    <li>Становая тяга: 4 подхода по 6 повторений</li>
+                                    <li>Подтягивания: 4 подхода до отказа</li>
+                                    <li>Отжимания на брусьях: 4 подхода до отказа</li>
+                                    <li>Планка с отягощением: 3 подхода по 60 секунд</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                            <li class="training__item">
+                                <h4 class="training__item-title">Высокоинтенсивная интервальная тренировка (HIIT)</h4>
+                                <p class="training__item-description">Максимально интенсивная тренировка для сжигания жира и улучшения выносливости. Выполняйте 2-3 раза в неделю.</p>
+                                <ul>
+                                    <li>Разминка: 5 минут динамической растяжки</li>
+                                    <li>20 секунд максимально интенсивной работы, 10 секунд отдыха (8 повторений)</li>
+                                    <li>1 минута отдыха</li>
+                                    <li>20 секунд максимально интенсивной работы, 10 секунд отдыха (8 повторений)</li>
+                                    <li>1 минута отдыха</li>
+                                    <li>20 секунд максимально интенсивной работы, 10 секунд отдыха (8 повторений)</li>
+                                    <li>Заминка: 5 минут легкой кардио нагрузки и растяжки</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                            <li class="training__item">
+                                <h4 class="training__item-title">Функциональная тренировка</h4>
+                                <p class="training__item-description">Комплексная функциональная тренировка для улучшения силы, выносливости и координации. Выполняйте 3-4 раза в неделю.</p>
+                                <ul>
+                                    <li>Рывок гири: 5 подходов по 10 повторений на каждую руку</li>
+                                    <li>Запрыгивания на тумбу: 4 подхода по 12 повторений</li>
+                                    <li>Турецкий подъем: 3 подхода по 5 повторений на каждую сторону</li>
+                                    <li>Бурпи с прыжком: 4 подхода по 15 повторений</li>
+                                    <li>Канатная тяга: 4 подхода по 30 секунд</li>
+                                    <li>Фермерская ходьба: 4 подхода по 40 метров</li>
+                                </ul>
+                                <a href="#" class="button button--secondary training__button">Подробнее</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="title title--section">Советы по тренировкам</h2>
+                <div class="tips">
+                    <div class="tip">
+                        <h3 class="tip__title">Правильная разминка</h3>
+                        <p class="tip__text">Всегда начинайте тренировку с разминки, чтобы подготовить мышцы и суставы к нагрузке и снизить риск травм.</p>
+                    </div>
+                    <div class="tip">
+                        <h3 class="tip__title">Постепенное увеличение нагрузки</h3>
+                        <p class="tip__text">Увеличивайте интенсивность и объем тренировок постепенно, чтобы дать организму время адаптироваться.</p>
+                    </div>
+                    <div class="tip">
+                        <h3 class="tip__title">Правильное питание</h3>
+                        <p class="tip__text">Обеспечьте организм необходимыми питательными веществами до и после тренировки для лучшего восстановления.</p>
+                    </div>
+                    <div class="tip">
+                        <h3 class="tip__title">Регулярность</h3>
+                        <p class="tip__text">Регулярные тренировки дают лучший результат, чем редкие, но интенсивные. Старайтесь тренироваться 3-5 раз в неделю.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__column">
+                <h3 class="footer__title">О проекте</h3>
+                <p>Наш сайт посвящен здоровому образу жизни и помогает людям следить за своими привычками, правильно питаться и тренироваться.</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Разделы</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="index.html" class="footer__link">Главная</a></li>
+                    <li class="footer__item"><a href="tips.html" class="footer__link">Советы по ЗОЖ</a></li>
+                    <li class="footer__item"><a href="habit-tracker.html" class="footer__link">Трекер привычек</a></li>
+                    <li class="footer__item"><a href="training-plans.html" class="footer__link">Планы тренировок</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Контакты</h3>
+                <ul class="footer__list">
+                    <li class="footer__item">Email: info@zozh.ru</li>
+                    <li class="footer__item">Телефон: +7 (123) 456-78-90</li>
+                    <li class="footer__item">Адрес: г. Москва, ул. Здоровья, 123</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright container">
+            <p>&copy; 2023 ЗОЖ - Здоровый образ жизни. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

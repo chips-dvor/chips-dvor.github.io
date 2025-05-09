@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер привычек - Здоровый образ жизни</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__container container">
+            <a href="index.html" class="header__logo">ЗОЖ</a>
+            <nav class="header__nav">
+                <div class="header__burger">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </div>
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
+                    <li class="header__menu-item"><a href="tips.html" class="header__menu-link">Советы</a></li>
+                    <li class="header__menu-item"><a href="habit-tracker.html" class="header__menu-link">Трекер привычек</a></li>
+                    <li class="header__menu-item"><a href="training-plans.html" class="header__menu-link">Планы тренировок</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <div class="container">
+            <h1 class="title title--main">Трекер привычек</h1>
+            
+            <section class="section">
+                <h2 class="title title--section">Отслеживайте свои привычки</h2>
+                <p class="section__description">Трекер привычек поможет вам следить за выполнением полезных привычек и формировать здоровый образ жизни. Добавляйте привычки, отмечайте их выполнение и следите за своим прогрессом.</p>
+                
+                <div class="tracker">
+                    <form class="tracker__form" id="habit-form">
+                        <input type="text" class="tracker__input" id="habit-name" placeholder="Название привычки" required>
+                        <select class="tracker__select" id="habit-category">
+                            <option value="water">Учет выпитой воды</option>
+                            <option value="steps">Учет пройденных шагов</option>
+                            <option value="sleep">Учет сна</option>
+                            <option value="other">Другое</option>
+                        </select>
+                        <button type="submit" class="tracker__button">Добавить привычку</button>
+                    </form>
+                    
+                    <div class="tracker__stats">
+                        <div class="tracker__stat">
+                            <h3 class="tracker__stat-title">Всего привычек</h3>
+                            <p class="tracker__stat-value" id="total-habits">0</p>
+                        </div>
+                        <div class="tracker__stat">
+                            <h3 class="tracker__stat-title">Вода</h3>
+                            <p class="tracker__stat-value" id="water-total">0 стак.</p>
+                        </div>
+                        <div class="tracker__stat">
+                            <h3 class="tracker__stat-title">Шаги</h3>
+                            <p class="tracker__stat-value" id="steps-total">0 шаг.</p>
+                        </div>
+                        <div class="tracker__stat">
+                            <h3 class="tracker__stat-title">Сон</h3>
+                            <p class="tracker__stat-value" id="sleep-total">0 ч.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="tracker__subtitle">Ваши привычки</h3>
+                    <ul class="tracker__list" id="habits-list">
+                        <!-- Здесь будут отображаться привычки -->
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="title title--section">Рекомендуемые привычки</h2>
+                <div class="cards">
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Выпивать 8 стаканов воды в день</h3>
+                            <p class="card__text">Достаточное потребление воды помогает поддерживать обмен веществ, улучшает состояние кожи и общее самочувствие.</p>
+                            <button class="button button--secondary add-recommended-habit" data-name="Выпивать 8 стаканов воды" data-category="water">Добавить в трекер</button>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Проходить 10000 шагов в день</h3>
+                            <p class="card__text">Ежедневная ходьба улучшает работу сердечно-сосудистой системы, помогает контролировать вес и повышает выносливость.</p>
+                            <button class="button button--secondary add-recommended-habit" data-name="Проходить 10000 шагов" data-category="steps">Добавить в трекер</button>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Спать 7-8 часов в сутки</h3>
+                            <p class="card__text">Полноценный сон необходим для восстановления организма, укрепления иммунитета и поддержания когнитивных функций.</p>
+                            <button class="button button--secondary add-recommended-habit" data-name="Спать 7-8 часов" data-category="sleep">Добавить в трекер</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__column">
+                <h3 class="footer__title">О проекте</h3>
+                <p>Наш сайт посвящен здоровому образу жизни и помогает людям следить за своими привычками, правильно питаться и тренироваться.</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Разделы</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="index.html" class="footer__link">Главная</a></li>
+                    <li class="footer__item"><a href="tips.html" class="footer__link">Советы по ЗОЖ</a></li>
+                    <li class="footer__item"><a href="habit-tracker.html" class="footer__link">Трекер привычек</a></li>
+                    <li class="footer__item"><a href="training-plans.html" class="footer__link">Планы тренировок</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Контакты</h3>
+                <ul class="footer__list">
+                    <li class="footer__item">Email: info@zozh.ru</li>
+                    <li class="footer__item">Телефон: +7 (123) 456-78-90</li>
+                    <li class="footer__item">Адрес: г. Москва, ул. Здоровья, 123</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright container">
+            <p>&copy; 2023 ЗОЖ - Здоровый образ жизни. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Трекер привычек
+            const habitForm = document.getElementById('habit-form');
+            const habitsList = document.getElementById('habits-list');
+            const totalHabitsElement = document.getElementById('total-habits');
+            const waterTotalElement = document.getElementById('water-total');
+            const stepsTotalElement = document.getElementById('steps-total');
+            const sleepTotalElement = document.getElementById('sleep-total');
+            
+            // Загрузка привычек из localStorage
+            let habits = JSON.parse(localStorage.getItem('habits')) || [];
+            
+            // Обновление статистики
+            function updateStats() {
+                totalHabitsElement.textContent = habits.length;
+                
+                let waterTotal = 0;
+                let stepsTotal = 0;
+                let sleepTotal = 0;
+                
+                habits.forEach(habit => {
+                    if (habit.category === 'water') {
+                        waterTotal += habit.value;
+                    } else if (habit.category === 'steps') {
+                        stepsTotal += habit.value;
+                    } else if (habit.category === 'sleep') {
+                        sleepTotal += habit.value;
+                    }
+                });
+                
+                waterTotalElement.textContent = waterTotal + ' стак.';
+                stepsTotalElement.textContent = stepsTotal + ' шаг.';
+                sleepTotalElement.textContent = sleepTotal + ' ч.';
+            }
+            
+            // Отображение привычек
+            function renderHabits() {
+                habitsList.innerHTML = '';
+                
+                if (habits.length === 0) {
+                    habitsList.innerHTML = '<li class="tracker__empty">У вас пока нет привычек. Добавьте первую привычку!</li>';
+                    return;
+                }
+                
+                habits.forEach((habit, index) => {
+                    const li = document.createElement('li');
+                    li.className = 'tracker__item';
+                    
+                    const nameDiv = document.createElement('div');
+                    nameDiv.innerHTML = `
+                        <span class="tracker__item-name">${habit.name}</span>
+                        <span class="tracker__item-category">${getCategoryName(habit.category)}</span>
+                    `;
+                    
+                    const valueDiv = document.createElement('div');
+                    valueDiv.className = 'tracker__item-value';
+                    
+                    const minusBtn = document.createElement('button');
+                    minusBtn.className = 'tracker__item-button';
+                    minusBtn.textContent = '-';
+                    minusBtn.addEventListener('click', () => {
+                        if (habit.value > 0) {
+                            habit.value--;
+                            updateHabit(index, habit);
+                        }
+                    });
+                    
+                    const valueSpan = document.createElement('span');
+                    valueSpan.className = 'tracker__item-count';
+                    valueSpan.textContent = habit.value + getUnitByCategory(habit.category);
+                    
+                    const plusBtn = document.createElement('button');
+                    plusBtn.className = 'tracker__item-button';
+                    plusBtn.textContent = '+';
+                    plusBtn.addEventListener('click', () => {
+                        habit.value++;
+                        updateHabit(index, habit);
+                    });
+                    
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.className = 'tracker__item-delete';
+                    deleteBtn.textContent = 'Удалить';
+                    deleteBtn.addEventListener('click', () => {
+                        deleteHabit(index);
+                    });
+                    
+                    valueDiv.appendChild(minusBtn);
+                    valueDiv.appendChild(valueSpan);
+                    valueDiv.appendChild(plusBtn);
+                    
+                    li.appendChild(nameDiv);
+                    li.appendChild(valueDiv);
+                    li.appendChild(deleteBtn);
+                    
+                    habitsList.appendChild(li);
+                });
+            }
+            
+            // Получение названия категории
+            function getCategoryName(category) {
+                switch(category) {
+                    case 'water': return 'Вода';
+                    case 'steps': return 'Шаги';
+                    case 'sleep': return 'Сон';
+                    default: return 'Другое';
+                }
+            }
+            
+            // Получение единицы измерения по категории
+            function getUnitByCategory(category) {
+                switch(category) {
+                    case 'water': return ' стак.';
+                    case 'steps': return ' шаг.';
+                    case 'sleep': return ' ч.';
+                    default: return '';
+                }
+            }
+            
+            // Обновление привычки
+            function updateHabit(index, updatedHabit) {
+                habits[index] = updatedHabit;
+                saveHabits();
+                renderHabits();
+                updateStats();
+            }
+            
+            // Удаление привычки
+            function deleteHabit(index) {
+                habits.splice(index, 1);
+                saveHabits();
+                renderHabits();
+                updateStats();
+            }
+            
+            // Сохранение привычек в localStorage
+            function saveHabits() {
+                localStorage.setItem('habits', JSON.stringify(habits));
+            }
+            
+            // Обработка отправки формы
+            habitForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nameInput = document.getElementById('habit-name');
+                const categorySelect = document.getElementById('habit-category');
+                
+                const name = nameInput.value.trim();
+                const category = categorySelect.value;
+                
+                if (name) {
+                    const newHabit = {
+                        name,
+                        category,
+                        value: 0
+                    };
+                    
+                    habits.push(newHabit);
+                    saveHabits();
+                    renderHabits();
+                    updateStats();
+                    
+                    nameInput.value = '';
+                    categorySelect.selectedIndex = 0;
+                }
+            });
+            
+            // Добавление рекомендуемых привычек
+            const recommendedButtons = document.querySelectorAll('.add-recommended-habit');
+            recommendedButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    const category = this.getAttribute('data-category');
+                    
+                    // Проверяем, есть ли уже такая привычка
+                    const existingHabit = habits.find(habit => habit.name === name);
+                    if (!existingHabit) {
+                        const newHabit = {
+                            name,
+                            category,
+                            value: 0
+                        };
+                        
+                        habits.push(newHabit);
+                        saveHabits();
+                        renderHabits();
+                        updateStats();
+                        
+                        // Прокручиваем к списку привычек
+                        document.getElementById('habits-list').scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        alert('Эта привычка уже добавлена в ваш трекер!');
+                    }
+                });
+            });
+            
+            // Инициализация отображения привычек и статистики
+            renderHabits();
+            updateStats();
+        });
+    </script>
+</body>
+</html>
